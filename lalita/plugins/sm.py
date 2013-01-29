@@ -90,8 +90,7 @@ class SM(Plugin):
 				msg_text += u"3. %s\n" % (self.sm[user][3])
 			msg = MIMEText(msg_text)
 			me = "hermes@olapic.com"
-			#you = "developers@olapic.com"
-			you = "sebas@olapic.com"
+			you = "developers@olapic.com"
 			msg['Subject'] = u"SM %s" % (datetime.datetime.now().strftime("%d-%m-%Y"))
 			msg['From'] = me
 			msg['To'] = you

@@ -15,6 +15,9 @@ from lalita import Plugin
 class SM(Plugin):
 	def init(self, config):
 		self.register(self.events.COMMAND, self.process_sm, ['sm'])
+		self.email = config['email']
+		self.password = config['password']
+		self.to = config['to']
 		self.config()
 	
 	def config(self):
@@ -89,18 +92,15 @@ class SM(Plugin):
 				msg_text += u"2. %s\n" % (self.sm[user][2])
 				msg_text += u"3. %s\n" % (self.sm[user][3])
 			msg = MIMEText(msg_text)
-			me = "hermes@olapic.com"
-			#you = "developers@olapic.com"
-			you = "sebas@olapic.com"
 			msg['Subject'] = u"SM %s" % (datetime.datetime.now().strftime("%d-%m-%Y"))
-			msg['From'] = me
-			msg['To'] = you
+			msg['From'] = self.email
+			msg['To'] = self.to
 			s = smtplib.SMTP('smtp.gmail.com', 587)
 			s.ehlo()
 			s.starttls()
 			s.ehlo()
-			s.login(me, "6DF1FFFAE081221CD3CA6415E5ABFBCA5DDB067725A99DC8771730D1DFE0673C")
-			s.sendmail(me, [you], msg.as_string())
+			s.login(self.email, self.password)
+			s.sendmail(self.email, [self.to], msg.as_string())
 			s.quit()
 
 			self.say(channel, u"Resetting....")

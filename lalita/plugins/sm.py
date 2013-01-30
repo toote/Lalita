@@ -27,6 +27,7 @@ class SM(Plugin):
 		self.started = False
 		self.active = None
 		self.cancel = False
+		self.started_by = None
 
 	def process_sm(self, user, channel, command, *what):
 		f = 'option_'+what[0]

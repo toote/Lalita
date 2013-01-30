@@ -35,6 +35,15 @@ class SM(Plugin):
 		else:
 			self.say(channel, u"%s What the heck is '%s'?" % (user, what[0]))
 	
+	def option_add(self, user, channel, command, what):
+		if self.started:
+			self.users = tuple(list(self.users) + list(what))
+			self.order = self.order + list(what)
+			random.shuffle(self.order)
+			for user in what:
+				self.sm[user] = dict()
+			self.say(channel, u"Added %s to the meeting" % (', '.join(what)))
+	
 	def option_start(self, user, channel, command, what):
 		if not what:
 			self.say(channel, u"%s You need to tell me who is going to be at the SM" % (user))
@@ -44,10 +53,11 @@ class SM(Plugin):
 			random.shuffle(self.order)
 			for user in self.users:
 				self.sm[user] = dict()
-			self.say(channel, u"Starting standup meeting with %s" % (', '.join(self.users)))
+			self.say(channel, u"Starting standup meeting with %s. %s is leading it" % (', '.join(self.users), user))
 			self.active = self.order.pop()
 			self.say(channel, u"%s you are first, because of reasons" % (self.active))
 			self.started = True
+			self.started_by = user
 
 	def option_1(self, user, channel, command, what):
 		if self.started and user == self.active:
@@ -68,7 +78,7 @@ class SM(Plugin):
 				self.active = self.order.pop()
 				self.say(channel, u"%s Got it, %s you are next" % (user, self.active))
 			else:
-				self.option_end(user, channel, command, what)
+				self.option_end(self.started_by, channel, command, what)
 		else:
 			self.say(channel, u"%s Don't be a jerk" % (user))
 
@@ -79,18 +89,29 @@ class SM(Plugin):
 		else:
 			self.say(channel, u"%s Say cancel again!! say cancel again!! I dare you!! I double dare you motherf***" % (user))
 			self.cancel = True
+	
+	def option_pass(self, user, channel, command, what):
+		if self.started and user == self.started_by:
+			if self.order:
+				self.active = self.order.pop()
+				self.say(channel, u"%s Got it, %s you are next" % (user, self.active))
+			else:
+				self.option_end(self.started_by, channel, command, what)
 
 	def option_end(self, user, channel, command, what):
-		if self.started:
+		if self.started and user == self.started_by:
 			self.say(channel, u"Ending the meeting....")
 
 			self.say(channel, u"Sending emails....")
 			msg_text = u""
 			for user in self.users:
 				msg_text += u"\n\n#%s\n\n" % (user)
-				msg_text += u"1. %s\n" % (self.sm[user][1])
-				msg_text += u"2. %s\n" % (self.sm[user][2])
-				msg_text += u"3. %s\n" % (self.sm[user][3])
+				if 1 in self.sm[user]:
+					msg_text += u"1. " + (self.sm[user][1]) + "\n"
+				if 2 in self.sm[user]:
+					msg_text += u"2. " + (self.sm[user][2]) + "\n"
+				if 3 in self.sm[user]:
+					msg_text += u"3. " + (self.sm[user][3]) + "\n"
 			msg = MIMEText(msg_text)
 			msg['Subject'] = u"SM %s" % (datetime.datetime.now().strftime("%d-%m-%Y"))
 			msg['From'] = self.email

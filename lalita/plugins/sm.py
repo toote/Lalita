@@ -84,14 +84,14 @@ class SM(Plugin):
 			self.say(channel, u"%s Don't be a jerk" % (user))
 
 	def option_cancel(self, user, channel, command, what):
-		if self.cancel:
+		if self.cancel and user == self.started_by:
 			self.say(channel, u"%s Ok, done" % (user))
 			self.config()
 		else:
 			self.say(channel, u"%s Say cancel again!! say cancel again!! I dare you!! I double dare you motherf***" % (user))
 			self.cancel = True
 	
-	def option_pass(self, user, channel, command, what):
+	def option_next(self, user, channel, command, what):
 		if self.started and user == self.started_by:
 			if self.order:
 				self.active = self.order.pop()

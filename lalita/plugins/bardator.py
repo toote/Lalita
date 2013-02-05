@@ -35,6 +35,7 @@ class Bardator(Plugin):
 			u"BUE": u"¯\_(ツ)_/¯",
 			u"TWS": u"TWSS!!!!",
 			u"ECFD": u"http://imgur.com/BjcW8!!!!",
+			u"V": u"VIRGEEEEEEN!!! http://bit.ly/11QtwX4",
 		}
 
 	def bard(self, user, channel, command, *args):

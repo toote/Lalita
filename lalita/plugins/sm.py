@@ -114,7 +114,7 @@ class SM(Plugin):
 				if 3 in self.sm[user]:
 					msg_text += u"3. " + (self.sm[user][3]) + "\n"
 			msg = MIMEText(msg_text.encode('utf-8'))
-			msg['Subject'] = u"SM %s" % (datetime.datetime.now().strftime("%d-%m-%Y"))
+			msg['Subject'] = u"[SM] %s" % (datetime.datetime.now().strftime("%d-%m-%Y"))
 			msg['From'] = self.email
 			msg['To'] = self.to
 			s = smtplib.SMTP('smtp.gmail.com', 587)

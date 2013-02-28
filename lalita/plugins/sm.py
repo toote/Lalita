@@ -98,6 +98,15 @@ class SM(Plugin):
 				self.say(channel, u"%s Got it, %s you are next" % (user, self.active))
 			else:
 				self.option_end(self.started_by, channel, command, what)
+
+	def option_move(self, user, channel, command, what):
+		if self.started and user == self.started_by:
+			if self.order:
+				self.order.insert(0, self.active)
+				self.active = self.order.pop()
+				self.say(channel, u"%s Got it, %s you are next" % (user, self.active))
+			else:
+				self.option_end(self.started_by, channel, command, what)
 	
 	def option_who(self, user, channel, command, what):
 		if self.started:

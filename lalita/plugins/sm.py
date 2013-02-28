@@ -41,8 +41,8 @@ class SM(Plugin):
 			self.users = tuple(list(self.users) + list(what))
 			self.order = self.order + list(what)
 			random.shuffle(self.order)
-			for user in what:
-				self.sm[user] = dict()
+			for auser in what:
+				self.sm[auser] = dict()
 			self.say(channel, u"Added %s to the meeting" % (', '.join(what)))
 	
 	def option_start(self, user, channel, command, what):
@@ -52,8 +52,8 @@ class SM(Plugin):
 			self.users = what
 			self.order = list(what)
 			random.shuffle(self.order)
-			for user in self.users:
-				self.sm[user] = dict()
+			for auser in self.users:
+				self.sm[auser] = dict()
 			self.say(channel, u"Starting standup meeting with %s. %s is leading it" % (', '.join(self.users), user))
 			self.active = self.order.pop()
 			self.say(channel, u"%s you are first, because of reasons" % (self.active))
@@ -98,6 +98,10 @@ class SM(Plugin):
 				self.say(channel, u"%s Got it, %s you are next" % (user, self.active))
 			else:
 				self.option_end(self.started_by, channel, command, what)
+	
+	def option_who(self, user, channel, command, what):
+		if self.started:
+			self.say(channel, u"%s it's your turn" % (self.active))
 
 	def option_end(self, user, channel, command, what):
 		if self.started and user == self.started_by:

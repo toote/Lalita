@@ -24,19 +24,19 @@ class Bardator(Plugin):
 			u"me hacés mierda...",
 		]
 		self.specific_bards = {
-			u"UG": u"ULTRA GAAAY! http://bit.ly/11RY2CF",
-			u"G": u"GAAAAAAY http://bit.ly/127JH4n",
-			u"UN": u"ULTRA NEEEERD http://bit.ly/VCfgDn",
+			u"UG": u"ULTRA GAAAY! http://i2.kym-cdn.com/entries/icons/original/000/008/910/ultra-gay.png",
+			u"G": u"GAAAAAAY http://media.tumblr.com/tumblr_m9g64idfjp1qbnggp.jpg",
+			u"UN": u"ULTRA NEEEERD http://cdn.memegenerator.net/instances/400x/23940800.jpg",
 			u"AHH": u"AHHHHHHHHHHHHHHHHHHHHHHHHHHHH!!!! http://bit.ly/Uje2WI",
-			u"E": u"Entendiiiido http://bit.ly/ReCzC9",
-			u"D": u"http://bit.ly/QNdTzb",
-			u"LC": u"LCDTMAB!!! http://bit.ly/UKv3xU",
-			u"LP": u"LA HAS LIADO PARDA!! http://bit.ly/SRfVhA",
+			u"E": u"Entendiiiido http://www.youtube.com/watch?v=3R92ArVZhc4&feature=youtu.be",
+			u"D": u"http://www.youtube.com/watch?v=a1Y73sPHKxw",
+			u"LC": u"LCDTMAB!!! https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-ash4/306428_10151129068200792_1317690822_n.jpg",
+			u"LP": u"LA HAS LIADO PARDA!! http://www.youtube.com/watch?v=ICQrvG6jfOA",
 			u"BUE": u"¯\_(ツ)_/¯",
 			u"TWS": u"TWSS!!!!",
 			u"ECFD": u"http://imgur.com/BjcW8!!!!",
-			u"V": u"VIRGEEEEEEN!!! http://bit.ly/11QtwX4",
-			u"LTA": u"LA TENÉS ADENTRO! http://bit.ly/ZMsUpC",
+			u"V": u"VIRGEEEEEEN!!! http://t1.gstatic.com/images?q=tbn:ANd9GcQiMuf5Zv1gF0op99Btka2ZS6vCMpW2QIcBsW7NrWXEoIRYJyO4",
+			u"LTA": u"LA TENÉS ADENTRO! http://www.memegenerator.es/imagenes/memes/0/1185384.jpg",
 			u"burn": u"BUUURN! http://d22zlbw5ff7yk5.cloudfront.net/images/cm-21462-150526c45f3346.jpeg"
 		}
 

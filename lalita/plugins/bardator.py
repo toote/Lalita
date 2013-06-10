@@ -22,6 +22,7 @@ class Bardator(Plugin):
 			u"que ágil",
 			u"que tipo de mierda",
 			u"me hacés mierda...",
+			u"go home, you are drunk",
 		]
 		self.specific_bards = {
 			u"UG": u"ULTRA GAAAY! http://i2.kym-cdn.com/entries/icons/original/000/008/910/ultra-gay.png",

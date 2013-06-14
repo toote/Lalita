@@ -113,7 +113,7 @@ class SM(Plugin):
 			self.say(channel, u"%s it's your turn" % (self.active))
 
 	def option_list(self, user, channel, command, what):
-		if(self.started:
+		if self.started:
 				self.say(channel, u"Users addded to the sm: %s" % (', '.join(self.users)))
 
 	def option_end(self, user, channel, command, what):

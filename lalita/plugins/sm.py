@@ -25,7 +25,6 @@ class SM(Plugin):
         self.order = list()
         self.sm = dict()
         self.started = False
-        self.active = None
         self.cancel = False
         self.started_by = None
 
@@ -55,8 +54,6 @@ class SM(Plugin):
             for auser in self.users:
                 self.sm[auser] = dict()
             self.say(channel, u"Starting standup meeting with %s. %s is leading it" % (', '.join(self.users), user))
-            self.active = self.order.pop()
-            self.say(channel, u"%s you are first, because of reasons" % (self.active))
             self.started = True
             self.started_by = user
 
@@ -87,27 +84,6 @@ class SM(Plugin):
         else:
             self.say(channel, u"%s Say cancel again!! say cancel again!! I dare you!! I double dare you motherf***" % (user))
             self.cancel = True
-
-    def option_next(self, user, channel, command, what):
-        if self.started and user == self.started_by:
-            if self.order:
-                self.active = self.order.pop()
-                self.say(channel, u"%s Got it, %s you are next" % (user, self.active))
-            else:
-                self.option_end(self.started_by, channel, command, what)
-
-    def option_move(self, user, channel, command, what):
-        if self.started and user == self.started_by:
-            if self.order:
-                self.order.insert(0, self.active)
-                self.active = self.order.pop()
-                self.say(channel, u"%s Got it, %s you are next" % (user, self.active))
-            else:
-                self.option_end(self.started_by, channel, command, what)
-
-    def option_who(self, user, channel, command, what):
-        if self.started:
-            self.say(channel, u"%s it's your turn" % (self.active))
 
     def option_check(self, user, channel, command, what):
         if self.started:

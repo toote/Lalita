@@ -60,12 +60,16 @@ class SM(Plugin):
     def option_1(self, user, channel, command, what):
         if user in self.sm:
             self.sm[user][1] = " ".join(what)
+            if self.check_if_finished():
+                self.option_end(self.started_by, channel, command, what)
         else:
             self.say(channel, u"%s you are not invited to this sm" % (user))
 
     def option_2(self, user, channel, command, what):
         if user in self.sm:
             self.sm[user][2] = " ".join(what)
+            if self.check_if_finished():
+                self.option_end(self.started_by, channel, command, what)
         else:
             self.say(channel, u"%s you are not invited to this sm" % (user))
 

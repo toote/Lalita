@@ -128,7 +128,7 @@ class SM(Plugin):
             msg['Subject'] = u"[SM] %s" % (datetime.datetime.now().strftime("%d-%m-%Y"))
             msg['From'] = self.email
             msg['To'] = self.to
-            s = smtplib.SMTP('smtp.gmail.com', 587)
+            s = smtplib.SMTP('smtp.sendgrid.net', 25)
             s.ehlo()
             s.starttls()
             s.ehlo()

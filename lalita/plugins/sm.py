@@ -37,6 +37,11 @@ class SM(Plugin):
         self.email = config['email']
         self.password = config['password']
         self.to = config['to']
+        if 'remember_time' in config:
+            self.remember_time = config['remember_time']
+        else:
+            # 30 minutes by default
+            self.remember_time = 60 * 30
         self.config()
 
     def config(self):
@@ -90,13 +95,15 @@ is going to be at the SM" % (user)
             self.started = True
             self.started_by = user
             self.started_on = datetime.datetime.now()
-            self.rememberer = reactor.callLater(5, self.check_status, channel)
+            self.rememberer = reactor.callLater(self.remember_time, self.check_status, channel)
 
     def check_status(self, channel):
         """Callable to remember everyone to do the SM."""
 
-        who = self.check_who_didnt_finish()
-        self.say(channel, u"%s Remember to do the SM!" % (', '.join(who)))
+        if self.started:
+            who = self.check_who_didnt_finish()
+            self.say(channel, u"%s Remember to do the SM!" % (', '.join(who)))
+            self.rememberer = reactor.callLater(self.remember_time, self.check_status, channel)
 
     def option_1(self, user, channel, command, what):
         """What I did command."""
@@ -134,7 +141,6 @@ is going to be at the SM" % (user)
         if self.cancel and user == self.started_by:
             self.say(channel, u"%s Ok, done" % (user))
             self.config()
-            self.rememberer.cancel()
         else:
             say = u"%s Say cancel again!! say cancel again!! \
 I dare you!! I double dare you motherf***" % (user)
@@ -214,7 +220,6 @@ I dare you!! I double dare you motherf***" % (user)
             self.say(channel, u"Resetting....")
             msg_text = None
             self.config()
-            self.rememberer.cancel()
 
             self.say(channel, u"Done. One is glad to be of service")
         else:

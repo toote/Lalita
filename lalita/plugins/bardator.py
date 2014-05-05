@@ -36,7 +36,7 @@ class Bardator(Plugin):
 			u"BUE": u"¯\_(ツ)_/¯",
 			u"TWS": u"TWSS!!!!",
 			u"ECFD": u"http://imgur.com/BjcW8!!!!",
-			u"V": u"VIRGEEEEEEN!!! http://t1.gstatic.com/images?q=tbn:ANd9GcQiMuf5Zv1gF0op99Btka2ZS6vCMpW2QIcBsW7NrWXEoIRYJyO4",
+			u"V": u"VIRGEEEEEEN!!! http://www.virginmedia.com/images/40-Year-Old-Virgin-poster-590x350.jpg",
 			u"LTA": u"LA TENÉS ADENTRO! http://www.memegenerator.es/imagenes/memes/0/1185384.jpg",
 			u"burn": u"BUUURN! http://d22zlbw5ff7yk5.cloudfront.net/images/cm-21462-150526c45f3346.jpeg"
 		}

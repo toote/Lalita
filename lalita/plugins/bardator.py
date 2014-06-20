@@ -26,7 +26,7 @@ class Bardator(Plugin):
 		]
 		self.specific_bards = {
 			u"UG": u"ULTRA GAAAY! http://i2.kym-cdn.com/entries/icons/original/000/008/910/ultra-gay.png",
-			u"GXL": u"GAY XL! https://www.evernote.com/shard/s7/sh/f60ce8c1-a0fe-40f0-a3fc-ccf88c52e99a/0b90957260f316f62a627d2cc68bb095/deep/0/uber-gay.jpg",
+			u"GXL": u"GAY XL! https://i.cloudup.com/NIgrcHEvG6.png",
 			u"G": u"GAAAAAAY http://media.tumblr.com/tumblr_m9g64idfjp1qbnggp.jpg",
 			u"UN": u"ULTRA NEEEERD http://cdn.memegenerator.net/instances/400x/23940800.jpg",
 			u"AHH": u"AHHHHHHHHHHHHHHHHHHHHHHHHHHHH!!!! http://bit.ly/Uje2WI",

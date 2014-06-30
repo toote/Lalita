@@ -29,7 +29,7 @@ class Bardator(Plugin):
 			u"GXL": u"GAY XL! https://i.cloudup.com/NIgrcHEvG6.png",
 			u"G": u"GAAAAAAY http://media.tumblr.com/tumblr_m9g64idfjp1qbnggp.jpg",
 			u"UN": u"ULTRA NEEEERD http://cdn.memegenerator.net/instances/400x/23940800.jpg",
-			u"AHH": u"AHHHHHHHHHHHHHHHHHHHHHHHHHHHH!!!! http://bit.ly/Uje2WI",
+			u"AHH": u"AHHHHHHHHHHHHHHHHHHHHHHHHHHHH!!!! http://bit.ly/PJpxN4",
 			u"E": u"Entendiiiido http://www.youtube.com/watch?v=3R92ArVZhc4&feature=youtu.be",
 			u"D": u"http://www.youtube.com/watch?v=a1Y73sPHKxw",
 			u"LC": u"LCDTMAB!!! https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-ash4/306428_10151129068200792_1317690822_n.jpg",

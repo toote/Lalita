@@ -62,7 +62,7 @@ class Bardator(Plugin):
 
 
 	def private_bard(self, user, message):
-		regex = re.compile('^\@bard\s(?P<channel>[\w]+)\s(?P<user>[a-zA-Z0-9\-\_]+)\s?(?:(?P<command>[\w]+))?$')
+		regex = re.compile('^\@bard\s(?P<channel>[\w\#]+)\s(?P<user>[a-zA-Z0-9\-\_]+)\s?(?:(?P<command>[\w]+))?$')
 		r = regex.search(message.strip())
 		if r.groupdict():
 			channel = r.groupdict()['channel']

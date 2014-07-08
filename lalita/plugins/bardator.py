@@ -40,6 +40,7 @@ class Bardator(Plugin):
 			u"V": u"VIRGEEEEEEN!!! http://www.virginmedia.com/images/40-Year-Old-Virgin-poster-590x350.jpg",
 			u"LTA": u"LA TENÉS ADENTRO! http://www.memegenerator.es/imagenes/memes/0/1185384.jpg",
 			u"burn": u"BUUURN! http://d22zlbw5ff7yk5.cloudfront.net/images/cm-21462-150526c45f3346.jpeg"
+			u"brasilera": u"YOU'RE ALL FUC*ED UP!!! http://i.imgur.com/RW5SZ97.gif"
 		}
 
 	def bard(self, user, channel, command, *args):

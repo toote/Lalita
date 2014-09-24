@@ -23,6 +23,7 @@ class Bardator(Plugin):
 			u"que tipo de mierda",
 			u"me hacés mierda...",
 			u"go home, you are drunk",
+			u"gordito geek!",
 		]
 		self.specific_bards = {
 			u"UG": u"ULTRA GAAAY! http://i2.kym-cdn.com/entries/icons/original/000/008/910/ultra-gay.png",
@@ -41,7 +42,8 @@ class Bardator(Plugin):
 			u"V": u"VIRGEEEEEEN!!! http://www.virginmedia.com/images/40-Year-Old-Virgin-poster-590x350.jpg",
 			u"LTA": u"LA TENÉS ADENTRO! http://www.memegenerator.es/imagenes/memes/0/1185384.jpg",
 			u"burn": u"BUUURN! http://d22zlbw5ff7yk5.cloudfront.net/images/cm-21462-150526c45f3346.jpeg",
-			u"FU": u"OH MY, YOU'RE ALL FUC*ED UP!!! http://i.imgur.com/RW5SZ97.gif"
+			u"FU": u"OH MY, YOU'RE ALL FUC*ED UP!!! http://i.imgur.com/RW5SZ97.gif",
+			u"SLM": u"SACATE LA MOCHILA!!! http://bit.ly/1mSs8nr",
 		}
 
 	def bard(self, user, channel, command, *args):

@@ -159,7 +159,7 @@ I dare you!! I double dare you motherf***" % (user)
         """List user command."""
 
         if self.started:
-            say = u"Users addded to the sm: %s" % (', '.join(self.users))
+            say = u"Users addded to the sm: %s. Meeting leaded by %s" % (', '.join(self.users), self.started_by)
             self.say(channel, say)
 
     def check_if_finished(self):

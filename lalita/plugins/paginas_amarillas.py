@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright 2012 Sebastian Alvarez <sebastianmalvarez@gmail.com>
+# Copyright 2014 Sebastian Alvarez <sebastianmalvarez@gmail.com>
 # License: GPL v3
 # For further info, see LICENSE file
 

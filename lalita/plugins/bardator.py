@@ -45,6 +45,7 @@ class Bardator(Plugin):
 			u"burn": u"BUUURN! http://d22zlbw5ff7yk5.cloudfront.net/images/cm-21462-150526c45f3346.jpeg",
 			u"FU": u"OH MY, YOU'RE ALL FUC*ED UP!!! http://i.imgur.com/RW5SZ97.gif",
 			u"SLM": u"SACATE LA MOCHILA!!! http://k32.kn3.net/taringa/F/0/F/F/4/1/agus1023/1FB.jpg",
+			u"IIHH": u"IIIIIHHH https://pbs.twimg.com/media/BnVsPkOCAAAomZ_.jpg",
 		}
 
 	def bard(self, user, channel, command, *args):

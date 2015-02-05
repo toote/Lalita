@@ -31,6 +31,7 @@ class Bardator(Plugin):
 			u"BOTON": u"Vos sos un botón! https://www.youtube.com/watch?v=Kjwra1vXhEg",
 			u"GXL": u"GAY XL! https://i.cloudup.com/NIgrcHEvG6.png",
 			u"G": u"GAAAAAAY http://media.tumblr.com/tumblr_m9g64idfjp1qbnggp.jpg",
+			u"HET": u"HETERO https://s-media-cache-ak0.pinimg.com/236x/35/9a/b1/359ab1a003cf51b658b980a4632818c8.jpg",
 			u"UN": u"ULTRA NEEEERD http://cdn.memegenerator.net/instances/400x/23940800.jpg",
 			u"AHH": u"AHHHHHHHHHHHHHHHHHHHHHHHHHHHH!!!! http://bit.ly/PJpxN4",
 			u"E": u"Entendiiiido http://www.youtube.com/watch?v=3R92ArVZhc4&feature=youtu.be",

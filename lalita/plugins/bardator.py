@@ -47,6 +47,7 @@ class Bardator(Plugin):
 			u"FU": u"OH MY, YOU'RE ALL FUC*ED UP!!! http://i.imgur.com/RW5SZ97.gif",
 			u"SLM": u"SACATE LA MOCHILA!!! http://k32.kn3.net/taringa/F/0/F/F/4/1/agus1023/1FB.jpg",
 			u"IIHH": u"IIIIIHHH https://pbs.twimg.com/media/BnVsPkOCAAAomZ_.jpg",
+			u"LS": u"BYE BYE LITTLE SEBASTIAN!!!! https://www.youtube.com/watch?v=h-PUW6y4F6c",
 		}
 
 	def bard(self, user, channel, command, *args):
